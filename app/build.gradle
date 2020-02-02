@@ -28,4 +28,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     implementation project(':lib_reflection')
+
+
+    implementation project(':lib_annotation_processing')
+    annotationProcessor project(':lib_processor')
 }

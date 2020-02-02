@@ -10,7 +10,7 @@ import android.widget.ListView;
 
 public class MainActivity extends ListActivity {
 
-    private String[] titles = {"使用反射编写"};
+    private String[] titles = {"使用反射编写","编译时注解"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +23,10 @@ public class MainActivity extends ListActivity {
     protected void onListItemClick(ListView l, View v, int position, long id) {
         switch (position) {
             case 0:
-                startActivity(new Intent(MainActivity.this, AnnotationActivity.class).putExtra("TAG",0));
+                startActivity(new Intent(MainActivity.this, ReflectionActivity.class));
                 break;
             case 1:
+                startActivity(new Intent(MainActivity.this, AnnotationActivity.class));
                 break;
             default:
                 break;
